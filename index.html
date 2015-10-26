@@ -13,12 +13,16 @@
     <script type="text/babel">
 
     var TweetBox = React.createClass({
+      handleChange: function(e){
+        console.log(e.target.value);
+      },
+
       render: function() {
         return (
           <div className="well clearfix">
-            <textarea className="form-control"></textarea>
+            <textarea className="form-control" onChange={this.handleChange}></textarea>
             <br/>
-            <button className="btn btn-primary pull-right">Tweet</button>
+            <button className="btn btn-primary pull-right" disabled>Tweet</button>
             <button className="btn btn-primary pull-left">Clear</button>
 
           </div>
