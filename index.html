@@ -24,6 +24,10 @@
         this.setState({text:e.target.value});
       },
 
+      togglePhoto: function(event) {
+        this.setState({ photoAdded: !this.state.photoAdded });
+      },
+
       render: function() {
         return (
           <div className="well clearfix">
