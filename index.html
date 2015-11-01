@@ -36,6 +36,10 @@
         }
       },
 
+      clearPhoto: function(){
+
+      },
+
       render: function() {
         return (
           <div className="well clearfix">
@@ -44,7 +48,7 @@
             <span>{ this.remainingCharacters() }</span>
             <button className="btn btn-primary pull-right" disabled={this.remainingCharacters() === 140}>Tweet</button>
             <button className="btn btn-default pull-right" onClick={this.togglePhoto}>{this.state.photoAdded ? "✓ Photo Added" : "Add Photo" }</button>
-            <button className="btn btn-primary pull-left" onClick=//clearfunction>Clear</button>
+            <button className="btn btn-primary pull-left" onClick={this.clearPhoto}></button>
           </div>
         );
       }
